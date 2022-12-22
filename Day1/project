@@ -1,0 +1,8 @@
+#1. Creating a greeting for my program.
+print("Welcome ! to Band name genaretor : ")
+#2. Asking the user for the city that they grew up in.
+city = input('Name of your City :\n')
+#3. Asking the user for the name of a pet.
+pet = input("Name of your pet :  \n")
+#4. Combining the name of their city and pet and show them their band name.
+print("Your Band name is : "+city+" "+pet +"\n")
