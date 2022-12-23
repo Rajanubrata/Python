@@ -1,0 +1,17 @@
+print("Welcome to the Tip calculator!\n")
+print("\n")
+
+#taking total bill and typecast it into float
+bill=float(input("Please enter the total bill: Rs."))
+print("\n")
+
+#taking tip and typecast it into int
+tip=int(input("Please enter the tip: (%) "))
+print("\n")
+
+#taking total number of friends and typecast it into int
+person=int(input("Please enter the number of person: "))
+print("\n")
+
+pay=(bill+(bill*tip/100))/person
+print(f"Your total pay is: Rs. {round(pay,2)}")
