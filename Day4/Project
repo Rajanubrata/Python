@@ -1,0 +1,75 @@
+import random 
+print("Welcome to the game of Your Childhood !\n\n")
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+User_Choice = int(input("0 for rock 👊|| 1 for paper 🖐 || 2 for seasor ✌️ \nwhat do you choose ? -> "))
+print("\n")
+Computer_Choice = random.randint(0,2)
+
+#Shoing user's choice
+if User_Choice == 0:
+  print("You choose rock\n")
+  print(rock)
+elif User_Choice == 1:
+  print("You choose paper\n")
+  print(paper)
+elif User_Choice == 2:
+  print("You choose scissors\n")
+  print(scissors)
+else:
+  print("you choose invalid number")
+
+#Shoing computer's choice
+if Computer_Choice == 0:
+  print("Computer chooses rock\n")
+  print(rock)
+elif Computer_Choice == 1:
+  print("Computer chooses paper\n")
+  print(paper)
+elif Computer_Choice == 2:
+  print("Computer chooses scissors\n")
+  print(scissors)
+else:
+  print("Computer chooses invalid number") #never occur
+
+#check if invalid input from user ?
+if User_Choice <0 or User_Choice>2:
+  print("Invalid choice || You loose")
+elif User_Choice == 2 and Computer_Choice==0:
+  print("You Loose!")
+elif User_Choice == 0 and Computer_Choice == 2:
+  print("You Win!")
+elif User_Choice>Computer_Choice:
+  print("You Win!")
+elif User_Choice<Computer_Choice:
+  print("You Loose!")
+elif User_Choice == Computer_Choice:
+  print("Game Tie !")
+else:
+  print("made by Anubrata Mallick")
