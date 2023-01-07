@@ -1,0 +1,17 @@
+from turtle import Turtle, Screen
+import random
+timmi = Turtle()
+timmi.shape("turtle")
+timmi.width(4)
+
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "magenta", "SlateGray",
+           "SeaGreen"]
+direction = [0, 90, 180, 270]
+
+for _ in range(200):
+    timmi.color(random.choice(colours))
+    timmi.forward(50)
+    timmi.setheading(random.choice(direction))
+
+screen = Screen()
+screen.exitonclick()
