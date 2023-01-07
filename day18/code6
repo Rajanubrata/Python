@@ -1,0 +1,31 @@
+import turtle as t
+import random
+timmi = t.Turtle()
+timmi.shape("turtle")
+# timmi.width(6)
+timmi.speed(11)
+t.colormode(255)
+
+t.Screen().bgcolor("black")
+
+
+def rand_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    rand_colour = (r, g, b)
+    return rand_colour
+
+
+def spirograph(size_of_gap):
+    for _ in range(int(360/size_of_gap)):
+        timmi.color(rand_color())
+        timmi.circle(70)
+        position = timmi.heading()
+        timmi.setheading(position+size_of_gap)
+    timmi.forward(300)
+
+
+spirograph(5)
+screen = t.Screen()
+screen.exitonclick()
