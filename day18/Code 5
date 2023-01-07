@@ -1,0 +1,26 @@
+import turtle as t
+import random
+timmi = t.Turtle()
+timmi.shape("turtle")
+timmi.width(6)
+
+t.colormode(255)
+
+
+def rand_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    rand_colour = (r, g, b)
+    return rand_colour
+
+
+direction = [0, 90, 180, 270]
+
+for _ in range(200):
+    timmi.color(rand_color())
+    timmi.forward(20)
+    timmi.setheading(random.choice(direction))
+
+screen = t.Screen()
+screen.exitonclick()
