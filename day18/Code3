@@ -1,0 +1,18 @@
+from turtle import Turtle, Screen, penup, pendown
+
+timmi = Turtle()
+timmi.shape("turtle")
+
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "magenta", "SlateGray",
+           "SeaGreen"]
+
+for number in range(3, 11):
+    no_of_side = number
+    timmi.color(colours[number-3])
+    for _ in range(no_of_side):
+        angle = 360/no_of_side
+        timmi.forward(100)
+        timmi.right(angle)
+
+screen = Screen()
+screen.exitonclick()
