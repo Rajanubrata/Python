@@ -1,0 +1,13 @@
+from turtle import Turtle, Screen, penup, pendown
+timmi = Turtle()
+timmi.shape("turtle")
+timmi.color("red")
+
+for _ in range(50):
+    if _ % 2 == 0:
+        timmi.pendown()
+    else:
+        timmi.penup()
+    timmi.forward(10)
+screen = Screen()
+screen.exitonclick()
