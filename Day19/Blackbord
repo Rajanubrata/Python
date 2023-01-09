@@ -1,0 +1,40 @@
+from turtle import Turtle, Screen
+
+timmi = Turtle()
+screen = Screen()
+screen.bgcolor("black")
+timmi.pencolor("white")
+
+
+def move_forward():
+    timmi.forward(20)
+
+
+def move_backward():
+    timmi.back(20)
+
+
+def move_right():
+    heading = timmi.heading()+10
+    timmi.setheading(heading)
+
+
+def move_left():
+    heading = timmi.heading() - 10
+    timmi.setheading(heading)
+
+
+def clear_drawing():
+    timmi.clear()
+    timmi.penup()
+    timmi.home()
+    timmi.pendown()
+
+
+screen.listen()
+screen.onkey(move_forward, key="w")
+screen.onkey(move_backward, key="b")
+screen.onkey(move_right, key="a")
+screen.onkey(move_left, key="d")
+screen.onkey(clear_drawing, key="c")
+screen.exitonclick()
