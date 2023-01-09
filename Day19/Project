@@ -1,0 +1,35 @@
+import turtle
+from turtle import Turtle, Screen
+import random
+is_on = False
+screen = Screen()
+
+screen.listen()
+screen.setup(width=900, height=300)
+user_choice = screen.textinput(title="Make your bet", prompt="Choose your Turtle = ")
+color = ["red", "orange", "yellow", "green", "blue", "violet"]
+y_index = [-70, -40, -10, 20, 50, 80]
+all_turtle = []
+
+for idx in range(6):
+    new_turtle = Turtle(shape="turtle")
+    new_turtle.color(color[idx])
+    new_turtle.penup()
+    new_turtle.goto(x=-430, y=y_index[idx])
+    all_turtle.append(new_turtle)
+
+if user_choice:
+    is_on = True
+
+while is_on:
+    for turtle in all_turtle:
+        if turtle.xcor() > 430:
+            is_on = False
+            winner = turtle.pencolor()
+            if winner == user_choice:
+                print(f"You Win ! {winner} Turtle is the winner ")
+            else:
+                print(f"You Loose ! {winner} Turtle is the winner ")
+        pos = random.randint(0, 10)
+        turtle.forward(pos)
+screen.exitonclick()
