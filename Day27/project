@@ -1,0 +1,32 @@
+
+from tkinter import *
+
+window = Tk()
+window.minsize(height=200, width=300)
+window.config(bg="pink")
+
+
+def update_value():
+    value = round(int(txt_box.get())*1.60934, 2)
+    lable3.config(text=value)
+
+
+txt_box = Entry(width=20)
+txt_box.grid(row=0, column=1)
+
+lable1 = Label(text="Miles", bg="pink", font=("Arial", 20))
+lable1.grid(row=0, column=3)
+
+lable2 = Label(text="is equal to ", bg="pink", font=("Arial", 20))
+lable2.grid(row=1, column=0)
+
+lable3 = Label(text="0", bg="pink", font=("Arial", 20))
+lable3.grid(row=1, column=1)
+
+lable4 = Label(text="Km", bg="pink", font=("Arial", 20))
+lable4.grid(row=1, column=2)
+
+button = Button(text="Convert", bg="green yellow", font=("Arial", 15), command=update_value)
+button.grid(row=2, column=1)
+
+window.mainloop()
