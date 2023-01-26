@@ -20,7 +20,7 @@ else:
     
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 
-STOCK_API_KEY = "4V3LYCD9UXV0Z3O6"
+STOCK_API_KEY = "4V3L*********" #USE YOUR OWN API KEY
 
 
 stock_params = {
